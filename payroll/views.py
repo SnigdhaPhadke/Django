@@ -35,7 +35,8 @@ def authenticateuser(request):
             clientUsername=clientdata.username
             session["clientId"] = clientId
             response_data = {}
-            response_data['STATUS'] = 'Success'
+            #response_data['STATUS'] = 'Success'
+            response_data['STATUS'] = '200'
             response_data['CLIENTID'] = clientId
             response_data['MESSAGE'] = "Welcome "+ clientUsername
             return HttpResponse(
@@ -44,7 +45,8 @@ def authenticateuser(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Fail'
+            #response_data['STATUS'] = 'Fail'
+            response_data['STATUS'] = '401'
             response_data['MESSAGE'] = "Sorry " + username +" you don't have access for this site"
             return HttpResponse(
                 json.dumps(response_data),
@@ -82,7 +84,8 @@ def LegacyEmpData(request):
                     )
                     legacyemployeedata.save();
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -90,7 +93,8 @@ def LegacyEmpData(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -126,7 +130,8 @@ def NewEmpData(request):
                     )
                     newemployeedata.save();
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -134,7 +139,8 @@ def NewEmpData(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -176,7 +182,8 @@ def LegacyEmpPayData(request):
 
                     legacypaydata.save()
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -184,7 +191,8 @@ def LegacyEmpPayData(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -227,7 +235,8 @@ def NewEmpPayData(request):
 
                     newpaydata.save()
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -235,7 +244,8 @@ def NewEmpPayData(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -268,7 +278,8 @@ def EmpMappingData(request):
 
                     employeemappingdata.save()
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -276,7 +287,8 @@ def EmpMappingData(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -314,7 +326,8 @@ def LegacyPayComponentMapping(request):
 
                     legacypaycomponentmapping.save()
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -322,7 +335,8 @@ def LegacyPayComponentMapping(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
@@ -360,7 +374,8 @@ def NewPayComponentMapping(request):
                     )
                     newpaycomponentmappingdata.save();
             response_data = {}
-            response_data['STATUS'] = 'Passed'
+            #response_data['STATUS'] = 'Passed'
+            response_data['STATUS'] = '200'
             response_data['MESSAGE'] = 'The File is Uploaded Successfully'
             return HttpResponse(
                 json.dumps(response_data),
@@ -368,7 +383,8 @@ def NewPayComponentMapping(request):
             )
         else:
             response_data = {}
-            response_data['STATUS'] = 'Failure'
+            #response_data['STATUS'] = 'Failure'
+            response_data['STATUS'] = '400'
             response_data['MESSAGE'] = 'Failed to Upload the File'
             return HttpResponse(
                 json.dumps(response_data),
