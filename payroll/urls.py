@@ -3,10 +3,7 @@ from django.urls import path
 from django.conf.urls import url,include
 from payroll import views
 urlpatterns = [
-    #url(r'fileupload/', views.FileUploadView,name='FileUploadView1'),
-    #url(r'authenticate1/', views.authenticateuser1, name='authenticateuser1'),
     url(r'authenticate/', views.authenticateuser, name='authenticateuser'),
-    url(r'^$', views.index, name='index'),
     url(r'comparision/', views.Comparision.as_view()),
     url(r'legacyempdata/', views.LegacyEmpData,name='LegacyEmpData'),
     url(r'newempdata/', views.NewEmpData, name='NewEmpData'),
